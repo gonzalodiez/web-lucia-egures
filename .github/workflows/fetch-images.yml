@@ -4,6 +4,9 @@ name: Descargar y optimizar imágenes
 # descarga cada imagen, genera JPG optimizado (1800px y 720px) y hace commit.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['assets/img/sources.txt']
 
 permissions:
   contents: write
