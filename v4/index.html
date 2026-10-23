@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alma mía · 60 minutos · Una sesión contada paso a paso</title>
+<meta name="description" content="Un recorrido por lo que pasa en tu cuerpo durante una sesión de masaje en Alma mía. Maldonado y Punta del Este, en consultorio o a domicilio.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%23F7F4EF'/><circle cx='16' cy='16' r='7' fill='none' stroke='%23B9774E' stroke-width='2'/><circle cx='16' cy='16' r='2' fill='%231E2A24'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar"><i id="bar"></i></div>
+
+<header class="nav" data-nav>
+  <a href="#inicio" class="logo">Alma mía</a>
+  <nav class="menu" data-menu>
+    <a href="#viaje">El recorrido</a>
+    <a href="#elegir">Tratamientos</a>
+    <a href="#donde">Dónde</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Reservar</a>
+  </nav>
+  <a class="btn" data-wa>Reservar</a>
+  <button class="burger" data-burger aria-label="Menú" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<!-- capítulos laterales -->
+<aside class="chapters" id="chapters" aria-hidden="true"></aside>
+
+<!-- ===== 00 · PORTADA ===== -->
+<section class="cover" id="inicio" data-chapter="Inicio" data-bg="#F7F4EF" data-ink="#1E2A24">
+  <div class="cover-media"><img src="../assets/img/linen.jpg" alt=""></div>
+  <div class="cover-text">
+    <p class="eyebrow">Alma mía · Maldonado</p>
+    <h1><span class="num" id="cover-num">60</span><span class="unit">minutos</span></h1>
+    <p class="lead">Esto es lo que pasa en tu cuerpo durante una sesión. Bajá despacio: la página se mueve con vos.</p>
+    <a href="#viaje" class="scroll-cue"><span></span>Empezar el recorrido</a>
+  </div>
+</section>
+
+<!-- ===== 01-06 · VIAJE (sticky media + steps) ===== -->
+<section class="journey" id="viaje" data-chapter="El recorrido" data-bg="#F7F4EF" data-ink="#1E2A24">
+  <div class="sticky">
+    <div class="media" id="media"></div>
+    <div class="clock"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-opacity=".15" stroke-width="2"/><circle id="clock-arc" cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289" transform="rotate(-90 50 50)"/></svg><b id="clock-min">0</b><span>min</span></div>
+  </div>
+  <div class="steps" id="steps"></div>
+</section>
+
+<!-- ===== 07 · ELEGÍ TU RECORRIDO (horizontal) ===== -->
+<section class="choose" id="elegir" data-chapter="Tratamientos" data-bg="#1E2A24" data-ink="#F7F4EF">
+  <div class="choose-pin">
+    <div class="choose-head"><p class="eyebrow">Capítulo 07</p><h2>Ahora elegí <em>tu</em> recorrido</h2><p class="muted">Cada tratamiento es un camino distinto. Deslizá.</p></div>
+    <div class="choose-track" id="choose-track"></div>
+  </div>
+</section>
+
+<!-- ===== 08 · DÓNDE ===== -->
+<section class="where" id="donde" data-chapter="Dónde" data-bg="#EAE3D6" data-ink="#1E2A24">
+  <div class="where-text">
+    <p class="eyebrow">Capítulo 08</p>
+    <h2>En el consultorio.<br>O <em>donde vos estés.</em></h2>
+    <p>Consultorio en Maldonado. Y servicio a domicilio con camilla, toallas y aceites en toda la zona.</p>
+    <ul class="zone-list" id="zones"></ul>
+    <a class="btn" data-wa="Hola Lucía, quiero coordinar una sesión a domicilio.">Coordinar a domicilio</a>
+  </div>
+  <div class="where-media"><img src="../assets/img/domicilio.jpg" alt="Camilla frente al mar" data-speed="0.8"><img class="small" src="../assets/img/coast.jpg" alt="" data-speed="1.2"></div>
+</section>
+
+<!-- ===== 09 · NÚMEROS ===== -->
+<section class="numbers" data-chapter="Alma mía" data-bg="#1E2A24" data-ink="#F7F4EF">
+  <p class="eyebrow">Capítulo 09</p>
+  <h2>Sobre <em>Lucía</em></h2>
+  <div class="num-grid">
+    <div><b data-count="10+">0</b><span>técnicas terapéuticas y estéticas</span></div>
+    <div><b data-count="8">0</b><span>zonas de cobertura a domicilio</span></div>
+    <div><b data-count="100%">0</b><span>sesiones adaptadas a vos</span></div>
+    <div><b data-count="60">0</b><span>minutos mínimos de pausa</span></div>
+  </div>
+  <div class="bio"><img src="../assets/img/therapist.jpg" alt="Lucía Egures"><div id="bio-text"></div></div>
+</section>
+
+<!-- ===== 10 · GALERÍA (deck) ===== -->
+<section class="deck" id="galeria" data-chapter="Galería" data-bg="#F7F4EF" data-ink="#1E2A24">
+  <div class="deck-pin">
+    <div class="deck-head"><p class="eyebrow">Capítulo 10</p><h2>El <em>espacio</em></h2></div>
+    <div class="deck-stack" id="deck"></div>
+  </div>
+</section>
+
+<!-- ===== 11 · VOCES ===== -->
+<section class="voices" data-chapter="Voces" data-bg="#EAE3D6" data-ink="#1E2A24">
+  <p class="eyebrow">Capítulo 11</p>
+  <div id="voices"></div>
+</section>
+
+<!-- ===== 12 · FIN / CONTACTO ===== -->
+<section class="end" id="contacto" data-chapter="Reservar" data-bg="#1E2A24" data-ink="#F7F4EF">
+  <div class="end-text">
+    <p class="eyebrow">Capítulo final</p>
+    <h2>Tu sesión <em>empieza</em><br>con un mensaje.</h2>
+    <p>Contame qué sentís y te propongo el recorrido. Respondo el mismo día.</p>
+    <ul>
+      <li><span>WhatsApp</span><a data-tel></a></li>
+      <li><span>Email</span><a data-mail></a></li>
+      <li><span>Instagram</span><a data-ig>@almamiamasajes</a></li>
+    </ul>
+    <details class="faq-mini" id="faq"><summary>Preguntas frecuentes</summary><div></div></details>
+  </div>
+  <form class="form" data-form novalidate>
+    <label><span>Nombre</span><input name="nombre" required></label>
+    <label><span>WhatsApp</span><input name="telefono" required></label>
+    <label><span>Email (opcional)</span><input name="email" type="email"></label>
+    <label><span>Tratamiento</span><select name="servicio"></select></label>
+    <label><span>Mensaje</span><textarea name="mensaje" rows="3"></textarea></label>
+    <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+    <button class="btn light" type="submit">Enviar</button>
+    <p class="form-status" data-status></p>
+  </form>
+  <footer><span>Alma mía · Maldonado, Uruguay</span><span>© <span data-year></span> Lucía Egures</span></footer>
+</section>
+
+<script src="../assets/js/gsap.min.js"></script>
+<script src="../assets/js/ScrollTrigger.min.js"></script>
+<script>window.ALMA_BASE = "../";</script>
+<script src="../shared/content.js"></script>
+<script src="../shared/common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
