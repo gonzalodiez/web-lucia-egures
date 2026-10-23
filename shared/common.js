@@ -156,7 +156,7 @@
   A.fill = function () {
     document.querySelectorAll("[data-wa]").forEach(el => { el.href = A.waLink(el.getAttribute("data-wa") || undefined); el.target = "_blank"; el.rel = "noopener"; });
     document.querySelectorAll("[data-ig]").forEach(el => { el.href = A.brand.instagram; el.target = "_blank"; el.rel = "noopener"; });
-    document.querySelectorAll("[data-mail]").forEach(el => { el.href = "mailto:" + A.brand.email; el.textContent = el.textContent.trim() || A.brand.email; });
+    document.querySelectorAll("[data-mail]").forEach(el => { if (!A.brand.email) { el.remove(); return; } el.href = "mailto:" + A.brand.email; el.textContent = el.textContent.trim() || A.brand.email; });
     document.querySelectorAll("[data-tel]").forEach(el => { el.href = "tel:" + A.brand.phone.replace(/\s/g, ""); el.textContent = el.textContent.trim() || A.brand.phone; });
     document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
     // select de servicios

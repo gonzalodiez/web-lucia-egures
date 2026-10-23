@@ -13,11 +13,11 @@ window.ALMA = {
     // Reemplazar por el número real (formato internacional sin + ni espacios)
     whatsapp: "59899000000",
     phone: "+598 99 000 000",
-    email: "hola@almamiamasajes.com",
-    instagram: "https://instagram.com/almamiamasajes",
+    email: "",  // sin email público: contacto solo por WhatsApp e Instagram
+    instagram: "https://www.instagram.com/alma.mia.esteticacorporal",
     // Web3Forms access key: crear gratis en https://web3forms.com (250 envíos/mes)
     web3formsKey: "REEMPLAZAR_CON_TU_ACCESS_KEY",
-    hours: "Lunes a sábado · 9:00 a 20:00 · con cita previa"
+    hours: "Lunes a viernes 10:00 a 20:00 · Sábados 11:00 a 15:00"
   },
 
   hero: {
