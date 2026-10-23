@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alma mía · Masajes terapéuticos en Maldonado y Punta del Este</title>
+<meta name="description" content="Masajes terapéuticos, relajantes y descontracturantes, drenaje linfático, maderoterapia y tratamientos corporales en Maldonado. Atención a domicilio en Punta del Este.">
+<meta property="og:title" content="Alma mía · Masajes terapéuticos">
+<meta property="og:description" content="Volvé a habitar tu cuerpo. Masajes y bienestar corporal en Maldonado y Punta del Este.">
+<meta property="og:image" content="../assets/img/room.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23C4704F'/><path d='M10 20c3-8 9-8 12 0' stroke='%23FAF7F2' stroke-width='2.2' fill='none' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" data-nav>
+  <a href="#inicio" class="logo"><span class="logo-mark"></span>Alma <em>mía</em></a>
+  <nav class="menu" data-menu>
+    <a href="#servicios">Servicios</a>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#galeria">Galería</a>
+    <a href="#domicilio">A domicilio</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn btn-sm" data-wa>Reservar</a>
+  </nav>
+  <button class="burger" data-burger aria-label="Menú" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <p class="kicker" data-reveal id="hero-kicker"></p>
+    <h1 class="split" id="hero-title"></h1>
+    <p class="lead" data-reveal data-delay="400" id="hero-sub"></p>
+    <div class="hero-cta" data-reveal data-delay="550">
+      <a class="btn" data-wa>Reservar por WhatsApp</a>
+      <a class="link-arrow" href="#servicios">Ver tratamientos</a>
+    </div>
+    <div class="hero-meta" data-reveal data-delay="700">
+      <div><strong>Consultorio</strong><span>Maldonado</span></div>
+      <div><strong>A domicilio</strong><span>Punta del Este y zona</span></div>
+      <div><strong>Horario</strong><span>Lun a sáb · 9 a 20 h</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img" data-parallax="0.12"><img src="../assets/img/room.jpg" alt="Sala de masajes con luz natural"></div>
+    <div class="hero-card" data-parallax="-0.08">
+      <img src="../assets/img/hands-sm.jpg" alt="">
+      <div><b>Masaje descontracturante</b><span>60 min · el más pedido</span></div>
+    </div>
+    <div class="hero-badge" data-parallax="0.2">
+      <svg viewBox="0 0 100 100"><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" fill="none"/><text><textPath href="#circ">bienestar corporal · maldonado · punta del este · </textPath></text></svg>
+      <span>✺</span>
+    </div>
+  </div>
+  <a href="#zonas" class="scroll-hint"><span></span>scroll</a>
+</section>
+
+<!-- ============ MARQUEE ZONAS ============ -->
+<div class="marquee" id="zonas" aria-hidden="true"><div class="track" id="marquee-track"></div></div>
+
+<!-- ============ SOBRE ============ -->
+<section class="about section" id="sobre">
+  <div class="about-img" data-reveal>
+    <img src="../assets/img/therapist.jpg" alt="Lucía preparando la sesión">
+    <figure class="about-mini" data-reveal data-delay="200"><img src="../assets/img/oils-sm.jpg" alt=""></figure>
+  </div>
+  <div class="about-text">
+    <p class="kicker" data-reveal>Sobre mí</p>
+    <h2 data-reveal id="about-title"></h2>
+    <div id="about-body"></div>
+    <div class="stats" id="about-stats"></div>
+    <p class="sign" data-reveal>— Lucía Egures, terapeuta corporal</p>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="services section" id="servicios">
+  <div class="section-head">
+    <div>
+      <p class="kicker" data-reveal>Tratamientos</p>
+      <h2 data-reveal>Lo que tu cuerpo<br><em>necesita hoy</em></h2>
+    </div>
+    <div class="chips" id="chips" data-reveal></div>
+  </div>
+  <div class="grid" id="services-grid"></div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="process section">
+  <p class="kicker center" data-reveal>Cómo funciona</p>
+  <h2 class="center" data-reveal>Reservar es <em>simple</em></h2>
+  <ol class="steps" id="steps"></ol>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="gallery section" id="galeria">
+  <div class="section-head">
+    <div>
+      <p class="kicker" data-reveal>Galería</p>
+      <h2 data-reveal>El espacio, <em>los detalles</em></h2>
+    </div>
+    <p class="muted" data-reveal>Hacé clic en una imagen para verla grande.</p>
+  </div>
+  <div class="masonry" id="masonry"></div>
+</section>
+
+<!-- ============ DOMICILIO ============ -->
+<section class="home section-full" id="domicilio">
+  <div class="home-bg" data-parallax="0.25"><img src="../assets/img/coast.jpg" alt=""></div>
+  <div class="home-content">
+    <p class="kicker light" data-reveal>Servicio a domicilio</p>
+    <h2 data-reveal>El bienestar<br>llega a tu puerta</h2>
+    <p data-reveal data-delay="150">Camilla, toallas, aceites y música. Yo llevo todo. Vos solo elegís el lugar: tu casa, tu hotel, tu balcón frente al mar.</p>
+    <ul class="zones" id="zones"></ul>
+    <a class="btn btn-light" data-reveal data-delay="300" data-wa="Hola Lucía, quiero coordinar una sesión a domicilio.">Coordinar a domicilio</a>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="testi section">
+  <p class="kicker center" data-reveal>Lo que dicen</p>
+  <div class="testi-slider" id="testi">
+    <div class="testi-track"></div>
+    <div class="testi-dots"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq section">
+  <div class="faq-head">
+    <p class="kicker" data-reveal>Preguntas frecuentes</p>
+    <h2 data-reveal>Antes de <em>tu primera sesión</em></h2>
+    <p class="muted" data-reveal>¿Otra duda? <a data-wa>Escribime por WhatsApp</a>.</p>
+  </div>
+  <div class="accordion" id="faq"></div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact section" id="contacto">
+  <div class="contact-info">
+    <p class="kicker" data-reveal>Contacto</p>
+    <h2 data-reveal>Reservá tu <em>momento</em></h2>
+    <p data-reveal>Contame qué sentís y te propongo el tratamiento ideal. Respondo en el día.</p>
+    <ul class="contact-list" data-reveal>
+      <li><span>WhatsApp</span><a data-tel></a></li>
+      <li><span>Email</span><a data-mail></a></li>
+      <li><span>Instagram</span><a data-ig>@almamiamasajes</a></li>
+      <li><span>Consultorio</span><b>Maldonado, Uruguay</b></li>
+    </ul>
+    <img class="contact-img" src="../assets/img/candle.jpg" alt="" data-reveal>
+  </div>
+  <form class="form" data-form data-reveal novalidate>
+    <div class="row">
+      <label>Nombre<input name="nombre" required placeholder="Tu nombre"></label>
+      <label>Teléfono / WhatsApp<input name="telefono" required placeholder="+598 …"></label>
+    </div>
+    <label>Email<input name="email" type="email" placeholder="opcional"></label>
+    <label>¿Qué tratamiento te interesa?<select name="servicio"></select></label>
+    <label>Contame un poco<textarea name="mensaje" rows="4" placeholder="Dónde sentís la tensión, si preferís consultorio o domicilio, horarios…"></textarea></label>
+    <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+    <button class="btn" type="submit">Enviar consulta</button>
+    <p class="form-status" data-status></p>
+    <p class="form-note">También podés <a data-wa>escribir directo por WhatsApp</a>.</p>
+  </form>
+</section>
+
+<footer class="footer">
+  <a href="#inicio" class="logo"><span class="logo-mark"></span>Alma <em>mía</em></a>
+  <p>Masajes terapéuticos & bienestar corporal · Maldonado, Uruguay</p>
+  <p class="small">© <span data-year></span> Alma mía · Lucía Egures</p>
+</footer>
+
+<!-- Modal servicio -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Cerrar">&times;</button>
+    <img id="m-img" alt="">
+    <div class="modal-body">
+      <p class="kicker" id="m-cat"></p>
+      <h3 id="m-name"></h3>
+      <p id="m-long"></p>
+      <p class="muted" id="m-dur"></p>
+      <a class="btn" id="m-wa" target="_blank" rel="noopener">Reservar este tratamiento</a>
+    </div>
+  </div>
+</div>
+
+<script>window.ALMA_BASE = "../";</script>
+<script src="../shared/content.js"></script>
+<script src="../shared/common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

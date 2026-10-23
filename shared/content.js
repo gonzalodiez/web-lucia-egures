@@ -49,7 +49,7 @@ window.ALMA = {
       short: "Libera contracturas, nudos y tensión acumulada en cuello, espalda y hombros.",
       long: "Trabajo profundo sobre la musculatura con maniobras de presión, amasamiento y estiramiento. Ideal si pasás muchas horas sentado/a, entrenás o cargás estrés en la zona alta de la espalda.",
       duration: "60 min",
-      img: "assets/img/descontracturante.jpg",
+      img: "assets/img/hands.jpg",
       icon: "hands"
     },
     {
