@@ -1,0 +1,39 @@
+name: Descargar y optimizar imágenes
+
+# Se ejecuta a mano. Lee assets/img/sources.txt (nombre  url),
+# descarga cada imagen, genera JPG optimizado (1800px y 720px) y hace commit.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar ImageMagick
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+      - name: Descargar y convertir
+        run: |
+          set -e
+          cd assets/img
+          mkdir -p raw
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            case "$name" in \#*) continue;; esac
+            echo ">> $name"
+            curl -sSL --retry 3 -o "raw/$name.png" "$url"
+            convert "raw/$name.png" -strip -resize '1800x1800>' -quality 82 "$name.jpg"
+            convert "raw/$name.png" -strip -resize '720x720>'  -quality 78 "$name-sm.jpg"
+          done < sources.txt
+          rm -rf raw
+          ls -la
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/img/*.jpg
+          git commit -m "assets: imágenes generadas y optimizadas" || echo "nada que commitear"
+          git push
