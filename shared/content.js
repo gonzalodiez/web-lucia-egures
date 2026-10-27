@@ -119,7 +119,7 @@ window.ALMA = {
       short: "Ultrasonido de baja frecuencia para reducir grasa localizada.",
       long: "Rompe las células adiposas que luego el cuerpo elimina de forma natural. Se combina con drenaje linfático para potenciar resultados.",
       duration: "45 min",
-      img: "assets/img/estetica.jpg",
+      img: "assets/img/ultracavitacion.jpg",
       icon: "wave"
     },
     {
@@ -129,7 +129,7 @@ window.ALMA = {
       short: "Succión controlada que moldea, drena y mejora la celulitis.",
       long: "Ventosas con vacío que movilizan el tejido, mejoran la circulación y dan forma. Muy efectiva en glúteos, piernas y abdomen.",
       duration: "45 min",
-      img: "assets/img/maderoterapia.jpg",
+      img: "assets/img/vacumterapia.jpg",
       icon: "circle"
     },
     {
@@ -139,7 +139,7 @@ window.ALMA = {
       short: "Microneedling que renueva la piel y atenúa marcas y estrías.",
       long: "Microcanales que activan la regeneración natural de la piel. Para estrías, cicatrices, poros y textura. Protocolo profesional con cuidados post sesión.",
       duration: "45 min",
-      img: "assets/img/estetica.jpg",
+      img: "assets/img/dermapen.jpg",
       icon: "sparkle"
     }
   ],
