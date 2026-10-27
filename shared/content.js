@@ -11,8 +11,8 @@ window.ALMA = {
     city: "Maldonado, Uruguay",
     therapist: "Lucía Egures",
     // Reemplazar por el número real (formato internacional sin + ni espacios)
-    whatsapp: "59899000000",
-    phone: "+598 99 000 000",
+    whatsapp: "59899090968",
+    phone: "+598 99 090 968",
     email: "",  // sin email público: contacto solo por WhatsApp e Instagram
     instagram: "https://www.instagram.com/alma.mia.esteticacorporal",
     // Web3Forms access key: crear gratis en https://web3forms.com (250 envíos/mes)
