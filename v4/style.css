@@ -171,12 +171,20 @@ section{position:relative}
 .wa-float:hover{transform:scale(1.08)}
 
 @media (max-width:1024px){
-  .journey{grid-template-columns:1fr;padding:0 1.25rem}
-  .sticky{height:auto;position:sticky;top:0;z-index:1;padding:4.5rem 0 1rem;background:transparent}
-  .media{aspect-ratio:16/10;max-width:none;border-radius:16px}
-  .clock{display:none}
-  .steps{padding:2rem 0 10vh}
-  .step{min-height:60vh;max-width:none}
+  /* mobile: foto fija a pantalla completa, tarjetas de texto pasan por encima */
+  .journey{display:block;padding:0}
+  .sticky{position:sticky;top:0;height:100vh;height:100svh;z-index:0;display:block}
+  .media{position:absolute;inset:0;width:100%;max-width:none;aspect-ratio:auto;border-radius:0;box-shadow:none}
+  .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,42,36,.45),rgba(30,42,36,0) 28%,rgba(30,42,36,0) 70%,rgba(30,42,36,.3))}
+  .clock{left:auto;right:1rem;top:4.6rem;bottom:auto;transform:none;width:62px;height:62px;z-index:2}
+  .clock svg{inset:3px;width:56px;height:56px}
+  .clock b{font-size:1.3rem}
+  .clock span{display:none}
+  .steps{position:relative;z-index:1;margin-top:-100vh;margin-top:-100svh;padding:75vh 1rem 45vh}
+  .step{min-height:0;max-width:none;opacity:1;color:var(--ink);background:rgba(247,244,239,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:20px;padding:1.5rem 1.3rem 1.6rem;margin-bottom:80vh;box-shadow:0 24px 50px -20px rgba(0,0,0,.45)}
+  .step:last-child{margin-bottom:0}
+  .step h3{font-size:1.75rem;margin-bottom:.9rem}
+  .step p{font-size:1rem}
   .choose-pin{height:auto;padding:5rem 0}
   .choose-track{overflow-x:auto;scroll-snap-type:x mandatory;transform:none!important;padding-bottom:1rem;scrollbar-width:none}
   .ccard{scroll-snap-align:start}
@@ -193,6 +201,10 @@ section{position:relative}
   .menu.open{transform:none;visibility:visible;transition:transform .5s var(--ease),visibility 0s}
   .nav .btn{display:none}
   .burger{display:flex}
+  .nav{mix-blend-mode:normal;color:var(--ink);background:rgba(247,244,239,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:.85rem 1.25rem}
+  .burger span{background:var(--ink)}
+  body.no-scroll .nav{color:#fff;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+  body.no-scroll .burger span{background:#fff}
   .cover{padding-top:6rem}
   .cover h1{flex-direction:column;gap:0;align-items:flex-start}
   .num-grid{grid-template-columns:1fr 1fr}

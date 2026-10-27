@@ -162,10 +162,12 @@ window.ALMA = {
     { src: "assets/img/candle.jpg", alt: "Vela, sal marina y eucalipto", r: "1/1" }
   ],
 
+  // ⚠️ TESTIMONIOS DE EJEMPLO, NO SON REALES. Reemplazar por reseñas verdaderas
+  // (Google, Instagram, WhatsApp) con permiso de la clienta antes de publicar.
   testimonials: [
-    { q: "Llegué con la espalda hecha un nudo después de meses de home office. Salí flotando. Lucía tiene manos que escuchan.", a: "Carolina M.", w: "Punta del Este" },
-    { q: "Me atendió en casa, en La Barra, con todo armado en diez minutos. El drenaje me cambió las piernas en tres sesiones.", a: "Florencia R.", w: "La Barra" },
-    { q: "Fui por un regalo de cumpleaños y volví cada quince días. Las piedras calientes son otra cosa.", a: "Martín D.", w: "Maldonado" }
+    { q: "Llegué con la espalda hecha un nudo después de meses de home office. Salí flotando. Lucía tiene manos que escuchan.", a: "Reseña de ejemplo", w: "Punta del Este" },
+    { q: "Me atendió en casa, en La Barra, con todo armado en diez minutos. El drenaje me cambió las piernas en tres sesiones.", a: "Reseña de ejemplo", w: "La Barra" },
+    { q: "Fui por un regalo de cumpleaños y volví cada quince días. Las piedras calientes son otra cosa.", a: "Reseña de ejemplo", w: "Maldonado" }
   ],
 
   faq: [
