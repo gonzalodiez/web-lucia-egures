@@ -34,14 +34,14 @@ Por qué Cloudflare Pages y no otro:
 
 Cómo se pasa a producción (15 minutos):
 1. Comprar el dominio en Cloudflare (o transferir el actual `almamiamasajes.com` si ya lo tiene: la transferencia cuesta un año de renovación y no se pierde nada).
-2. Cloudflare → Workers & Pages → Create → Connect to Git → elegir este repo. Build command: vacío. Output: `/` (o `/v1` si se publica solo la versión elegida).
+2. Cloudflare → Workers & Pages → Create → Pages → Connect to Git → elegir este repo. Build command: `bash scripts/build.sh`. Output: `dist` (publica solo el diseño 1). Detalle paso a paso en el README.
 3. Custom domains → agregar `almamiamasajes.com` y `www`. Listo, HTTPS automático.
 
 ### Alternativas equivalentes (todas US$ 0 de hosting)
 
 | Host | Pros | Contras |
 |---|---|---|
-| **GitHub Pages** (ya configurado en este repo) | Cero configuración, mismo repo | Sin funciones serverless; límite blando de 100 GB/mes; necesita activarlo una vez en Settings → Pages |
+| **GitHub Pages** | Gratis, mismo repo | Sin funciones serverless; límite blando de 100 GB/mes; necesita activarlo una vez en Settings → Pages |
 | **Netlify Free** | Formularios nativos (100 envíos/mes) | 100 GB/mes y sistema de créditos confuso desde 2025 |
 | **Vercel Hobby** | Excelente DX | **No permite uso comercial** → habría que pagar Pro (US$ 20/mes) |
 

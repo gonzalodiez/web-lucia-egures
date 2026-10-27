@@ -1,0 +1,10 @@
+// Solo se usa si el sitio se despliega como Cloudflare Worker (alternativa a Pages).
+// Build command: bash scripts/build.sh · Deploy command: npx wrangler deploy
+{
+  "name": "alma-mia",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
