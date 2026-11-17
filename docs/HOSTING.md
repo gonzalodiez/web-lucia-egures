@@ -121,3 +121,28 @@ Resumen: hasta un nivel de "agenda + pagos + chatbot" se puede resolver con **US
 - Web3Forms vs Formspree: https://web3forms.com/alternatives/formspree-alternative · https://splitforms.com/blog/formspree-vs-web3forms
 - Chat widgets: https://www.capterra.com/p/167792/tawk-to/pricing/ · https://www.dragapp.com/blog/tidio-alternatives/
 - Cloudflare Workers / Workers AI free tier: https://www.cloudflare.com/plans.md · https://developers.cloudflare.com/workers-ai/platform/pricing/
+
+---
+
+## 8. Situación del dominio actual (relevado nov-2026)
+
+| Dato | Valor |
+|---|---|
+| Dominio | `almamiamasajes.com` |
+| Sitio actual | Webador / JouwWeb (constructor de sitios) |
+| Registrador | Openprovider (Hosting Concepts B.V., registrar.eu), vía Webador |
+| Registrado | 18-dic-2024 |
+| **Vence** | **18-dic-2026** |
+| Estado | Bloqueado para transferencia · DNSSEC activado |
+
+### Migración recomendada (antes del 18-dic)
+
+1. Lucía crea su cuenta de Cloudflare e invita al desarrollador como Administrator.
+2. Se publica el sitio en Cloudflare Pages y se revisa en `alma-mia.pages.dev`.
+3. En Webador: **desactivar DNSSEC**, desbloquear el dominio y pedir el **código de transferencia (auth code / EPP)**.
+4. En Cloudflare: **Add a domain** → `almamiamasajes.com` → copiar los dos nameservers que da Cloudflare y ponerlos en Webador. Esperar que quede "Active".
+5. En el proyecto de Pages: **Custom domains** → agregar `almamiamasajes.com` y `www.almamiamasajes.com`.
+6. Cloudflare → **Domain registration → Transfer domains** → pegar el auth code y pagar ≈ US$ 10,5 (suma un año al vencimiento).
+7. Cuando la transferencia figure completa, recién ahí cancelar el plan de Webador.
+
+Si se cancela Webador antes de transferir, se puede perder el dominio. Si se cambian los nameservers sin apagar DNSSEC, el sitio deja de cargar hasta corregirlo.

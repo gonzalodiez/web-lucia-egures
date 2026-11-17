@@ -16,7 +16,7 @@ Sitio de **Alma mía** (masajes terapéuticos y estética corporal, Maldonado / 
 
 ## Publicar en Cloudflare Pages (una sola vez)
 
-1. Entrar a https://dash.cloudflare.com → **Workers & Pages** → **Create** → pestaña **Pages** → **Connect to Git** (si aparece primero la opción de Workers, buscar el link "Looking to deploy Pages? Get started").
+1. Entrar a https://dash.cloudflare.com → menú izquierdo **Build → Compute → Workers & Pages** (o buscar "Pages" con ⌘K) → **Create application** → pestaña **Pages** → **Import an existing Git repository / Connect to Git**. Si solo aparece la opción de Workers, usar el link "Looking to deploy Pages? Get started", o seguir la alternativa Workers de abajo.
 2. Autorizar GitHub y elegir el repo `web-lucia-egures`.
 3. Configuración de build:
    - Project name: `alma-mia` (define la URL `alma-mia.pages.dev`)
@@ -27,6 +27,10 @@ Sitio de **Alma mía** (masajes terapéuticos y estética corporal, Maldonado / 
 4. **Save and Deploy**. En ~1 minuto queda online.
 
 Desde ahí, cada push a `main` se publica solo.
+
+### Cuenta de Cloudflare de la clienta
+
+La cuenta conviene que sea de Lucía (su email, su tarjeta). Ella queda como dueña (*Super Administrator*) y controla la facturación. Desde **Manage account → Members** invita al desarrollador como *Administrator* para que pueda desplegar y configurar. El hosting de Pages es gratis; lo único que se paga es el dominio, una vez por año, y la renovación automática se puede apagar cuando quiera.
 
 ### Dominio propio
 
