@@ -137,12 +137,18 @@ Resumen: hasta un nivel de "agenda + pagos + chatbot" se puede resolver con **US
 
 ### Migración recomendada (antes del 18-dic)
 
+Webador **no permite cambiar los nameservers** y solo entrega el código de transferencia **después de cancelar el plan**. Cloudflare Registrar exige que el dominio ya use nameservers de Cloudflare antes de aceptar una transferencia, así que el paso directo Webador → Cloudflare no es posible. Ruta:
+
 1. Lucía crea su cuenta de Cloudflare e invita al desarrollador como Administrator.
 2. Se publica el sitio en Cloudflare Pages y se revisa en `alma-mia.pages.dev`.
-3. En Webador: **desactivar DNSSEC**, desbloquear el dominio y pedir el **código de transferencia (auth code / EPP)**.
-4. En Cloudflare: **Add a domain** → `almamiamasajes.com` → copiar los dos nameservers que da Cloudflare y ponerlos en Webador. Esperar que quede "Active".
-5. En el proyecto de Pages: **Custom domains** → agregar `almamiamasajes.com` y `www.almamiamasajes.com`.
-6. Cloudflare → **Domain registration → Transfer domains** → pegar el auth code y pagar ≈ US$ 10,5 (suma un año al vencimiento).
-7. Cuando la transferencia figure completa, recién ahí cancelar el plan de Webador.
+3. Lucía crea cuenta en **Porkbun** (registrador barato que sí permite cambiar nameservers).
+4. Cancela el plan de Webador → Mi suscripción → Administrar dominios → **Transferir** → copia el código.
+5. Porkbun → Transfer → dominio + código → paga US$ 11,81 (incluye un año). Aprueba el mail de transferencia si llega. Tarda ~5 días.
+6. Ya en Porkbun: borrar registros **DNSSEC** si los hay, esperar 24 h.
+7. Agregar `almamiamasajes.com` en Cloudflare (Add a domain) y poner en Porkbun los dos nameservers que da Cloudflare.
+8. En Pages → Custom domains → `almamiamasajes.com` y `www.almamiamasajes.com`.
+9. Dejar Auto Renew activado en Porkbun. Opcional: después de 60 días se puede pasar el registro a Cloudflare Registrar; la diferencia de precio es mínima.
 
-Si se cancela Webador antes de transferir, se puede perder el dominio. Si se cambian los nameservers sin apagar DNSSEC, el sitio deja de cargar hasta corregirlo.
+Riesgos: si se cancela Webador y no se transfiere antes del 18-dic, el dominio no se renueva. Un mail `@almamiamasajes.com` alojado en Webador se pierde al transferir. La web vieja puede quedar fuera de línea unos días durante el cambio.
+
+Guía paso a paso para la clienta: `docs/guia-lucia.html`.
